@@ -93,3 +93,4 @@ print(model.predict(sample_transactions))
 
 # Show probabilities on the new transactions
 print(model.predict_proba(sample_transactions))
+
