@@ -1,4 +1,4 @@
-from movies import movie_dataset, movie_labels
+from movies import movie_dataset, movie_labels, normalize_point
 
 def distance(movie1, movie2):
   squared_difference = 0
@@ -31,4 +31,10 @@ def classify(unknown, dataset, labels, k):
   else:
     return 0
 
-print(classify([.4, .2, .9], movie_dataset, movie_labels, 5))
+print("Call Me By Your Name" in movie_dataset)
+
+my_movie = [3000000, 148, 1997]
+normalized_my_movie = normalize_point(my_movie)
+
+print(classify(normalized_my_movie, movie_dataset, movie_labels, 5))
+
