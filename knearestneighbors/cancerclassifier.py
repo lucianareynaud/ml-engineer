@@ -15,7 +15,8 @@ training_data, validation_data, training_labels, validation_labels = train_test_
 print(len(training_data), len(training_labels))
 
 accuracies = []
-for k in range (1, 101):
+k_list = range(1, 101)
+for k in k_list:
   classifier = KNeighborsClassifier(n_neighbors = k)
 
   classifier.fit(training_data, training_labels)
